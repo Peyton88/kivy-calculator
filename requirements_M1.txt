@@ -1,0 +1,2 @@
+pygame
+git+https://github.com/kivy/kivy.git
