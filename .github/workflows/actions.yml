@@ -16,6 +16,8 @@ jobs:
         uses: actions/checkout@main
       - run: echo "🎉 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🎉 The workflow is now ready to test your code on the runner."
+      - name: Setup Display
+        run: xhost local:root
       - name: Prepare virtual environment
         run: |
           python3 -m venv venv
