@@ -17,18 +17,21 @@ __email__ = "peyton888@gmail.com"
 
 
 from kivy.app import App
+from kivy.uix.screenmanager import ScreenManager, Screen
 from layout.layout import CalculatorLayout
 from events.event import CalculatorEvent
 from controller import Controller
 
 LAYOUT_ONLY = False
 
-
-class CalculatorApp(App):
-    def build(self):
+class MainScreen(Screen):
+    def __init__(self):
+        super().__init__()
         CL = CalculatorLayout()
+        self.add_widget(CL)
+
         if LAYOUT_ONLY is True:
-            return CL
+            return
 
         CC = Controller.create()
         CC.addSubscriber(CL.textpanel)
@@ -38,8 +41,14 @@ class CalculatorApp(App):
                 btn.addSubscriber(CC)
                 btn.bind(on_press=CalculatorEvent.button_click)
 
-        return CL
+class RootWidget(ScreenManager):
+    pass
 
+class CalculatorApp(App):
+    def build(self):
+        rootWidget = RootWidget()
+        rootWidget.add_widget(MainScreen())
+        return rootWidget
 
 def main():
     CalculatorApp().run()
