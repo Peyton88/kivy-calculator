@@ -9,7 +9,6 @@
 
 __author__ = 'Peyton Fang'
 __version__ = "1.0"
-__copyright__ = "Copyright (C) 2021 Peyton Fang"
 __email__ = "peyton888@gmail.com"
 
 
