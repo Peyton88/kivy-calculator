@@ -52,32 +52,113 @@ class BtnLayout(object):
     '''
     layout = [
         [
-            dict(text=BtnText.Operators.text_ac, font_size="30sp"),
-            dict(text=BtnText.Operators.text_sign, font_size="30sp"),
-            dict(text=BtnText.Operators.text_percent, font_size="30sp"),
-            dict(text=BtnText.Operators.text_divide, font_size="30sp")
+            dict(
+                text=BtnText.Operators.text_ac,
+                font_size="30sp",
+                background_normal='colors/red_normal.png',
+                background_down='colors/red_down.png'
+            ),
+            dict(
+                text=BtnText.Operators.text_sign,
+                font_size="30sp",
+                background_normal='colors/blue_normal.png',
+                background_down='colors/blue_down.png'
+            ),
+            dict(
+                text=BtnText.Operators.text_percent,
+                font_size="30sp",
+                background_normal='colors/blue_normal.png',
+                background_down='colors/blue_down.png'
+            ),
+            dict(
+                text=BtnText.Operators.text_divide,
+                font_size="30sp",
+                background_normal='colors/yellow_normal.png',
+                background_down='colors/yellow_down.png'
+            )
         ],
         [
-            dict(text=BtnText.Numbers.text_7, font_size="30sp"),
-            dict(text=BtnText.Numbers.text_8, font_size="30sp"),
-            dict(text=BtnText.Numbers.text_9, font_size="30sp"),
-            dict(text=BtnText.Operators.text_multiply, font_size="30sp")
+            dict(
+                text=BtnText.Numbers.text_7,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Numbers.text_8,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Numbers.text_9,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Operators.text_multiply,
+                font_size="30sp",
+                background_normal='colors/yellow_normal.png',
+                background_down='colors/yellow_down.png')
         ],
         [
-            dict(text=BtnText.Numbers.text_4, font_size="30sp"),
-            dict(text=BtnText.Numbers.text_5, font_size="30sp"),
-            dict(text=BtnText.Numbers.text_6, font_size="30sp"),
-            dict(text=BtnText.Operators.text_minus, font_size="30sp")
+            dict(
+                text=BtnText.Numbers.text_4,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Numbers.text_5,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Numbers.text_6,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Operators.text_minus,
+                font_size="30sp",
+                background_normal='colors/yellow_normal.png',
+                background_down='colors/yellow_down.png')
         ],
         [
-            dict(text=BtnText.Numbers.text_1, font_size="30sp"),
-            dict(text=BtnText.Numbers.text_2, font_size="30sp"),
-            dict(text=BtnText.Numbers.text_3, font_size="30sp"),
-            dict(text=BtnText.Operators.text_plus, font_size="30sp")
+            dict(
+                text=BtnText.Numbers.text_1,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Numbers.text_2,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Numbers.text_3,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Operators.text_plus,
+                font_size="30sp",
+                background_normal='colors/yellow_normal.png',
+                background_down='colors/yellow_down.png')
         ],
         [
-            dict(text=BtnText.Numbers.text_0, size_hint=(2, 1), font_size="30sp"),
-            dict(text=BtnText.Numbers.text_dot, font_size="30sp"),
-            dict(text=BtnText.Operators.text_equal, font_size="30sp")
+            dict(
+                text=BtnText.Numbers.text_0,
+                size_hint=(2, 1),
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Numbers.text_dot,
+                font_size="30sp",
+                background_normal='colors/gray_normal.png',
+                background_down='colors/gray_down.png'),
+            dict(
+                text=BtnText.Operators.text_equal,
+                font_size="30sp",
+                background_normal='colors/yellow_normal.png',
+                background_down='colors/yellow_down.png')
         ]
     ]
