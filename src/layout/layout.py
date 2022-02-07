@@ -28,7 +28,7 @@ class CalculatorLayout(BoxLayout):
         self.textpanel = CPanel.create()
         self.button_create()
         for row in self.btn_rows:
-            layout_row = BoxLayout(orientation='horizontal')
+            layout_row = BoxLayout(orientation='horizontal', padding=2, spacing=4)
             for btn in row:
                 layout_row.add_widget(btn)
             self.layout_rows.append(layout_row)
