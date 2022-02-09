@@ -25,7 +25,7 @@ LAYOUT_ONLY = False
 
 class MainScreen(Screen):
     def __init__(self):
-        super().__init__()
+        super().__init__(name='main_screen')
         CL = CalculatorLayout()
         self.add_widget(CL)
 
