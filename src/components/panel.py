@@ -56,6 +56,9 @@ class CPanel(CDisplay):
             self.text = self.sign + self.to_thousand_sep(self.number)
 
     def text_changed(self, text: str) -> None:
+        self.check_if_text_exceed_panel(text)
+
+    def check_if_text_exceed_panel(self, text: str) -> None:
         self.label.font_size = CPanel.MaxTextSize
         self.label.text = text
         self.label._label.refresh()

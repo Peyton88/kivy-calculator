@@ -40,3 +40,11 @@ class CalculatorLayout(BoxLayout):
         for row in BtnLayout.layout:
             btn_row = [CButton(**btn) for btn in row]
             self.btn_rows.append(btn_row)
+
+    def on_window_size_changed(self, *args):
+        '''
+            In case of phone rotation, check if text exceed panel again
+        '''
+        _, window_width, _ = args
+        self.textpanel.width = window_width
+        self.textpanel.check_if_text_exceed_panel(self.textpanel.text)

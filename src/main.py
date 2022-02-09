@@ -16,6 +16,7 @@ __email__ = "peyton888@gmail.com"
 
 
 from kivy.app import App
+from kivy.core.window import Window
 from kivy.uix.screenmanager import ScreenManager, Screen
 from layout.layout import CalculatorLayout
 from events.event import CalculatorEvent
@@ -39,6 +40,8 @@ class MainScreen(Screen):
             for btn in row:
                 btn.addSubscriber(CC)
                 btn.bind(on_press=CalculatorEvent.button_click)
+
+        Window.bind(on_resize=CL.on_window_size_changed)
 
 class RootWidget(ScreenManager):
     pass
