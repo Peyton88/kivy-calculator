@@ -31,7 +31,7 @@ class CPanel(CDisplay):
             font_size="{}sp".format(CPanel.MaxTextSize),
             halign="right",
             valign="center",
-            size_hint=(1.0, 1.2)
+            size_hint=(1.0, 0.25)
         )
         self.sign = ""
         self.number = "0"
