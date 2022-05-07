@@ -130,6 +130,10 @@ class Controller(CControl):
         elif bt.Numbers.text_dot in self.number:
             r = len(self.number) - self.number.find(bt.Numbers.text_dot) + 1
             self.number = str(round(float(self.number)/100, r))  # To fix case like 89.07/100 = 0.8906999999999999
+        elif 'e' in self.number:  # Check scientific notation
+            num = f'{float(self.number):f}'
+            r = len(num) - num.find(bt.Numbers.text_dot) + 1
+            self.number = str(round(float(num)/100, r))
         else:
             self.number = str(int(self.number)/100)
         self.history.append(self.sign+self.number)
@@ -167,6 +171,11 @@ class Controller(CControl):
             num = round(num1 - num2, r)
 
         num_str = str(num)
+
+        # Check for scientific notation
+        if 'e' in num_str:
+            num_str = f'{num:f}'
+
         num_str = self.remove_dot_zero(num_str)
 
         self.get_sign_and_number(num_str)
